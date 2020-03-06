@@ -1,5 +1,5 @@
 <?php 
-$prenom="john";
+$prenom='john';
 $nom="doe";
 $sexe="femme";
 $age=20;
