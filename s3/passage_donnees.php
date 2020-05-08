@@ -24,7 +24,20 @@ if(isset($_GET['c']) && $_GET['c']=='n'){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-<div class="container">
+<div class="row">
+<div class="col-md-6 border my-4">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed mollitia 
+deleniti impedit laborum recusandae iure, consectetur velit officia quod omnis, 
+laudantium facere labore reiciendis libero, voluptas voluptate alias animi.</div>
+
+<div class="col-md-6 border my-4">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed mollitia deleniti impedit laborum recusandae iure, consectetur velit officia quod omnis, laudantium facere labore reiciendis libero, voluptas voluptate alias animi.</div>
+<div class="col-md-6 border my-4">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed mollitia deleniti impedit laborum recusandae iure, consectetur velit officia quod omnis, laudantium facere labore reiciendis libero, voluptas voluptate alias animi.</div>
+<div class="col-md-6 border my-4">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed mollitia deleniti impedit laborum recusandae iure, consectetur velit officia quod omnis, laudantium facere labore reiciendis libero, voluptas voluptate alias animi.</div>
+</div>
+<div class="container-fluid bg-primary">
     <div class="row">
 
     <div class="col-md-6 mx-auto shadow mt-2 p-2">

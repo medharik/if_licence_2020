@@ -1,7 +1,8 @@
 <?php 
 
 //false (ou empty) : null, "", '',"0", [],0,0.0
-//true   : 
+
+//true   : 124, "esytys" , ["test"]
 
 $a="";
 if($a){
@@ -14,7 +15,7 @@ if(!empty($a)){
 echo "a est not empty $a<br>";
 }
 //
-if(isset($x)&& empty($x)){
+if(isset($x) && empty($x)){
     echo "x est vide empty";
 }
 

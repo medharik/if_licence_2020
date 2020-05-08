@@ -1,0 +1,2 @@
+FN 1 : chaque attribut doir etre atomique (mono valeur )
+1,ain sebaa , 3km , (q1,q2,q3, q3)

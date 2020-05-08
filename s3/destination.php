@@ -1,6 +1,8 @@
 <?php 
 //  $_POST , $_GET : variables globales / implicites 
 
+echo $_POST['qte'];
+die("");
 if(!isset($_POST['prix']) ){
 header("location:passage_donnees.php?c=p");
 exit();
@@ -17,7 +19,7 @@ exit();
 $prix=$_POST['prix'];
 $qte=$_POST['qte'];
 if(!is_numeric($prix) || !is_numeric($qte)){
-    header("location:passage_donnees.php?c=n");
+   // header("location:passage_donnees.php?c=n");
 exit();
 }
 $ttc=$prix*$qte;
