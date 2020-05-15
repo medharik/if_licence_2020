@@ -28,14 +28,37 @@ header("location:create.php?c=$chemin");
     // die("Arret"); 
     //ajouter($libelle,$prix);
 }
+// equivalent (==) de false : 0,"",0.0.[] ; false==0 , null  
 if($a==="delete"){
+    $produit=find($id);
+    if(is_file($produit['photo'])){// si le fichier  existe tjrs
+        unlink($produit['photo']);// supprime le fichier
+    }
     supprimer($id);
 }
 
 if($a==="update"){
-modifier($libelle,$prix,$id);
-}
 
-header("location:index.php?op=$a");
+    if(isset($_FILES['photo']) && !empty($_FILES['photo']['name'])){
+    
+        $infos=$_FILES['photo'];// tableau de 5 valeurs (tmp_name,name,size,error,type)
+     
+       $chemin=uploader($infos);//images/a.png
+       if(!is_numeric($chemin)){
+        $produit=find($id);
+        if(is_file($produit['photo'])){// si le fichier  existe tjrs
+            unlink($produit['photo']);// supprime le fichier
+        }
+           modifier($libelle,$prix,$id,$chemin);
+        //  ajouter($libelle,$prix,$chemin);
+     } else{
+     header("location:edit.php?id=$id&c=$chemin");
+    die();
+     }
+}else {
+    modifier($libelle,$prix,$id);
+}
+}
+ header("location:index.php?op=$a");
 
 ?>

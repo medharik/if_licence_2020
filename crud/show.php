@@ -2,6 +2,7 @@
 include("modele.php");
 $id=$_GET['id'];
 $produit=find($id);
+// var_dump($produit);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +15,11 @@ $produit=find($id);
 </head>
 <body>
 <div class="container">
+<?php 
 
+?>
 <div class="card mx-auto text-center" style="width: 18rem;">
-  <img src="https:placehold.it/400x400" class="card-img-top" alt="...">
+  <img src="<?=$produit['photo'];?>" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title text-primary"><?=$produit['libelle']?></h5>
     <p class="card-text text-danger"><?=$produit['prix']?>DHS</p>
